@@ -51,6 +51,11 @@
         </v-col>
 
       </v-row>
+      <v-row>
+        <v-col cols="12">
+          <p>Developed by <a href="https://github.com/ssYanhuo/">ssYanhuo</a></p>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 

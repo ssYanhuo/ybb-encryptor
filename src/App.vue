@@ -35,7 +35,7 @@ export default {
   }),
   methods:{
     showProject: function () {
-      window.open('https://github.com/ssYanhuo', '_blank')
+      window.open('https://github.com/ssYanhuo/ybb-encryptor', '_blank')
     }
   }
 };
