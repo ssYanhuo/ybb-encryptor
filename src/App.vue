@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar app color="white">
+      <div class="d-flex align-center">
+        <v-toolbar-title>YBB Encryptor</v-toolbar-title>
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+          text @click="showProject">
+        <span class="mr-2">GitHub</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-main>
+      <Encryptor/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Encryptor from './components/Encryptor';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Encryptor: Encryptor,
+  },
+
+  data: () => ({
+    //
+  }),
+  methods:{
+    showProject: function () {
+      window.open('https://github.com/ssYanhuo', '_blank')
+    }
+  }
+};
+</script>
